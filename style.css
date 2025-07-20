@@ -1,0 +1,221 @@
+
+body{
+
+background-image: url('Images/background.jpg');
+background-size:cover;
+
+}
+
+
+
+h1 {
+	text-align: center;
+  margin-top:150px;
+	font-size: 30px;
+	color: black;
+  font-style: ;
+	text-shadow: 2px 2px 4px #000000;
+
+}
+
+h2 {
+text-align: center;
+margin-top: 150px;
+
+
+}
+
+p {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #ecf0f1;
+    font-family: 'Cherry Swash',cursive;
+    font-size: 16px;
+}
+
+span {
+    color: #2BD6B4;
+}
+
+
+center{
+height :700px;
+width: 700px;
+margin-top: 20px;
+background-color:whit;
+border-radius: 30px;
+margin-left:25%;
+margin-right: 25%;
+border: 5px;
+border-color: ;
+border-style: ;
+
+
+
+
+}
+
+icture{
+  background-image: url(Images/merijn.jpeg);
+  display: block;
+
+  margin-top:0px;
+  text-indent: -9999px;
+  width: 460px;
+  height: 460px;
+}
+
+
+footer {
+height:25px;
+width:600px;
+font-size: 15px;
+color:black;
+
+background-color: white;
+text-align: center;
+border-radius: 25px;
+
+margin-top:50px;
+
+}
+
+
+
+
+}
+
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* /end */
+
+
+h3{
+  font-size: 50px;
+  margin-top:150px;
+  text-align: center;
+
+}
+
+/* THE FRONT */
+
+.front{
+    background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/326221/bc-front.jp);
+   background-color:white;
+   margin-top:30px;
+   border-color: white;
+   border-style: solid;
+   border-radius: 30px;
+}
+
+.logo{
+     width:150px; /*width of your image*/
+     height:150px; /*height of your image*/
+     background-image:url('Images/merijn.png');
+     margin-left: 0px;
+     margin-top:0px;
+     position:fixed;
+
+
+
+
+}
+
+/* /end */
+
+/* THE BACK */
+.back{
+
+   background-color:white;
+   margin-top:30px;
+   border-color: white;
+   border-style: solid;
+   border-radius: 30px;
+}
+
+/* /end */
+
+/* THE FLIP EFFECT */
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover
+
+
+  {
+
+		transform: rotateY(180deg);
+      cursor: pointer;
+
+	}
+
+  .flipcontainer:hover, .flipcontainer:active{
+    transform: rotateY(180deg);
+       cursor: pointer;
+   }
+.flip-container, .front, .back {
+   height: 400px;
+   width: 600px;
+}
+
+.flipper {
+	transition: 1s;
+	transform-style: preserve-3d;
+	position: relative;
+
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+}
+
+.front {
+	z-index: 2;
+	/* firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.back{
+   background-color: $black;
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+.vertical.flip-container {
+	position: relative;
+}
+
+	.vertical .back {
+		transform: rotateX(180deg);
+	}
+
+	.vertical.flip-container .flipper {
+		transform-origin: 100% 400x;
+	}
+
+	.vertical.flip-container:hover .flipper {
+		transform: rotateX(-180deg);
+	}
